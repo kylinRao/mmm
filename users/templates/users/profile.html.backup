@@ -1,0 +1,16 @@
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form >
+{% csrf_token %}
+{% for todo in todolist %}
+<div>
+<label> todo.remind_receiver_email  </label>
+<label> todo.remind_time  </label>
+<label> todo.remind_title  </label>
+<label> todo.remind_content  </label>
+<label> todo.remind_sender_email  </label>
+</div>
+{% endfor %}
+</form>
+
